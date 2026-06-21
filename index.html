@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomas Sexenian</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #181818;
+    --border: #2a2a2a;
+    --text: #e8e8e8;
+    --muted: #888;
+    --accent: #5b8dee;
+    --accent-dim: #3a5fa8;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  /* HEADER */
+  header { margin-bottom: 56px; }
+  header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+  header p.tagline { color: var(--muted); font-size: 1rem; margin-bottom: 20px; }
+  .contact-row { display: flex; gap: 20px; flex-wrap: wrap; }
+  .contact-row a {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--muted); font-size: 0.875rem;
+    transition: color 0.15s;
+  }
+  .contact-row a:hover { color: var(--text); text-decoration: none; }
+  .contact-row svg { flex-shrink: 0; }
+
+  /* SECTIONS */
+  section { margin-bottom: 48px; }
+  section h2 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ABOUT */
+  .about p { color: #c8c8c8; max-width: 660px; }
+
+  /* VENTURES */
+  .ventures { display: flex; flex-direction: column; gap: 20px; }
+  .venture-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+  }
+  .venture-card .card-header {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px;
+  }
+  .venture-card h3 { font-size: 0.95rem; font-weight: 600; }
+  .venture-card .card-header a { font-size: 0.8rem; color: var(--accent); }
+  .venture-card p { font-size: 0.875rem; color: var(--muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag {
+    background: #222; border: 1px solid var(--border);
+    border-radius: 4px; padding: 2px 8px;
+    font-size: 0.75rem; color: #999;
+  }
+
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 24px; }
+  .exp-item {}
+  .exp-item .exp-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 4px; margin-bottom: 4px;
+  }
+  .exp-item h3 { font-size: 0.95rem; font-weight: 600; }
+  .exp-item .role { font-size: 0.85rem; color: var(--muted); }
+  .exp-item .period { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+  .exp-item p { font-size: 0.875rem; color: #aaa; margin-top: 6px; }
+
+  /* SKILLS */
+  .skill-grid { display: flex; flex-direction: column; gap: 10px; }
+  .skill-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+  .skill-label { font-size: 0.78rem; color: var(--muted); min-width: 120px; flex-shrink: 0; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skill-tag {
+    background: #1c1c1c; border: 1px solid #2e2e2e;
+    border-radius: 4px; padding: 2px 8px;
+    font-size: 0.75rem; color: #bbb;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Tomas Sexenian</h1>
+    <p class="tagline">Senior AI Platform &amp; MLOps Engineer · Founder</p>
+    <div class="contact-row">
+      <a href="https://github.com/tomas-sexenian" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        github.com/tomas-sexenian
+      </a>
+      <a href="mailto:cuentastomassexenian@gmail.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        cuentastomassexenian@gmail.com
+      </a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>I build production AI systems and data platforms, and found companies on top of that work. 6+ years shipping multi-agent LLM pipelines, MLOps infrastructure, and cloud-native backends across AWS, Azure, and GCP — with a focus on inference cost, reliability, and safety at scale. Based in Uruguay, operating globally.</p>
+  </section>
+
+  <section>
+    <h2>Ventures</h2>
+    <div class="ventures">
+      <div class="venture-card">
+        <div class="card-header">
+          <h3>Remy</h3>
+          <a href="https://remy-app.com" target="_blank" rel="noopener">remy-app.com ↗</a>
+        </div>
+        <p>Restaurant operating system — live QR menus, one-touch WhatsApp supplier ordering, invoice tracking, and a recipe costing engine that auto-recalculates dish margins on price changes.</p>
+        <div class="tags">
+          <span class="tag">Multi-tenant SaaS</span>
+          <span class="tag">WebSockets</span>
+          <span class="tag">AI-assisted content</span>
+          <span class="tag">Uruguay-first</span>
+        </div>
+      </div>
+      <div class="venture-card">
+        <div class="card-header">
+          <h3>Sibyl</h3>
+        </div>
+        <p>B2B AI SaaS that validates marketing messages against synthetic audiences — helping teams predict how their copy lands before they send it.</p>
+        <div class="tags">
+          <span class="tag">LLM evaluation</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Next.js</span>
+        </div>
+      </div>
+      <div class="venture-card">
+        <div class="card-header">
+          <h3>Mercado Intel</h3>
+        </div>
+        <p>Market intelligence for e-commerce — competitive price tracking and AI-powered recommendations for Uruguayan and LATAM retailers.</p>
+        <div class="tags">
+          <span class="tag">Price intelligence</span>
+          <span class="tag">AI recommendations</span>
+          <span class="tag">LATAM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Zyte <span style="font-weight:400;color:var(--muted)">(formerly ScrapingHub)</span></h3>
+          <span class="period">2023 – Present</span>
+        </div>
+        <div class="role">Senior Automation &amp; AI Engineer</div>
+        <p>Built LLMNL, a production multi-agent LLM platform for automated data-quality assurance — cutting manual QA review effort 50%+ across 20+ pipelines. Multi-provider model serving (OpenAI, Anthropic, Gemini), end-to-end LLM observability via Langfuse, MCP server, Cloud Run.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Valvoline</h3>
+          <span class="period">2025 – Present</span>
+        </div>
+        <div class="role">Senior Automation Engineer (Freelance)</div>
+        <p>SAP-to-AWS modernization — replaced on-premise BI dashboards and legacy ETL with cloud-native pipelines on S3, Athena, and Glue.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Kroger / 84.51°</h3>
+          <span class="period">2025 – Present</span>
+        </div>
+        <div class="role">Senior Engineer (Freelance)</div>
+        <p>LLM-augmented PySpark pipeline for automated weekly brand-performance reports; containerized ML services on Azure Kubernetes Service.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Globant</h3>
+          <span class="period">2020 – 2024</span>
+        </div>
+        <div class="role">Senior Backend Developer</div>
+        <p>Shipped GeneXus platform features — .NET and Java code generators, PDF reporting engine, and a custom AWS S3 client wrapper for enterprise dev teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-row">
+        <span class="skill-label">AI / ML</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Multi-agent LLM</span>
+          <span class="skill-tag">LLM Evaluation</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">Model Serving</span>
+          <span class="skill-tag">LLM Observability</span>
+          <span class="skill-tag">MLOps / LLMOps</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Cloud</span>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Backend</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">Celery</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">.NET</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frontend</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Montevideo, Uruguay · Open to relocation</p>
+  </footer>
+
+</div>
+</body>
+</html>

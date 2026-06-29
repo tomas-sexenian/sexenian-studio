@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tomas Sexenian</title>
-<meta name="description" content="Senior AI Platform &amp; MLOps Engineer and founder. Building production LLM systems from Uruguay.">
+<title>Sexenian Studio</title>
+<meta name="description" content="We design and build software, AI tools, and digital products for businesses. Based in Uruguay, working globally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
   (function(){
     var s=localStorage.getItem('theme');
@@ -14,48 +17,58 @@
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 
 :root{
-  color-scheme: light;
-  --bg:#f8fafc;
+  color-scheme:light;
+  --bg:#f8f5f0;
   --surface:#ffffff;
-  --border:#e2e8f0;
-  --text:#0f172a;
-  --muted:#64748b;
-  --subtle:#94a3b8;
+  --border:#e5e0d8;
+  --text:#18160f;
+  --muted:#6b6257;
+  --subtle:#a09485;
   --accent:#2563eb;
 }
 
 [data-theme="dark"]{
-  color-scheme: dark;
-  --bg:#0d0d0e;
-  --surface:#161617;
-  --border:#27272a;
-  --text:#f4f4f5;
-  --muted:#a1a1aa;
-  --subtle:#71717a;
+  color-scheme:dark;
+  --bg:#0d0b09;
+  --surface:#171410;
+  --border:#2a2520;
+  --text:#f0ebe4;
+  --muted:#9a9088;
+  --subtle:#6b6058;
   --accent:#60a5fa;
 }
 
 body{
   background:var(--bg);
   color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
-  font-size:15px;
-  line-height:1.65;
+  font-family:'Outfit',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased;
   transition:background-color .18s,color .18s;
 }
 
-@media(prefers-reduced-motion:reduce){body{transition:none}}
+@media(prefers-reduced-motion:reduce){
+  body{transition:none}
+  html{scroll-behavior:auto}
+}
 
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
+*:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
 .container{
-  max-width:700px;
+  max-width:780px;
   margin:0 auto;
-  padding:40px 24px 80px;
+  padding:48px 28px 100px;
 }
 
 /* CONTROLS */
@@ -63,7 +76,7 @@ a:hover{text-decoration:underline}
   display:flex;
   justify-content:flex-end;
   gap:6px;
-  margin-bottom:40px;
+  margin-bottom:60px;
 }
 
 .ctrl{
@@ -74,91 +87,125 @@ a:hover{text-decoration:underline}
   color:var(--subtle);
   cursor:pointer;
   font-family:inherit;
-  font-size:.71rem;
+  font-size:.68rem;
   font-weight:500;
-  letter-spacing:.05em;
-  padding:4px 10px;
+  letter-spacing:.07em;
+  padding:5px 11px;
+  text-transform:uppercase;
   transition:border-color .15s,color .15s;
 }
 
 .ctrl:hover{border-color:var(--muted);color:var(--text)}
 
-/* HEADER */
+/* HERO */
 header{margin-bottom:48px}
 
 header h1{
-  font-size:1.65rem;
+  font-size:2.8rem;
   font-weight:700;
-  letter-spacing:-.03em;
-  line-height:1.2;
-  margin-bottom:4px;
+  letter-spacing:-.045em;
+  line-height:1.1;
+  margin-bottom:14px;
 }
 
-.tagline{
+.studio-tagline{
+  font-size:1.05rem;
   color:var(--muted);
-  font-size:.875rem;
-  margin-bottom:16px;
+  line-height:1.7;
+  max-width:500px;
+  margin-bottom:28px;
+  font-weight:400;
+  text-wrap:pretty;
 }
 
-.contact-row{
+.hero-actions{
   display:flex;
-  flex-wrap:wrap;
-  gap:14px;
   align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
-.contact-row a{
+.btn-primary{
   display:inline-flex;
   align-items:center;
-  gap:5px;
+  background:#1d4ed8;
+  color:#fff !important;
+  border-radius:8px;
+  font-family:inherit;
+  font-size:.875rem;
+  font-weight:600;
+  padding:10px 20px;
+  text-decoration:none !important;
+  transition:background .15s,transform .12s;
+}
+
+[data-theme="dark"] .btn-primary{background:#2563eb}
+
+.btn-primary:hover{background:#1e3a8a;transform:translateY(-1px)}
+[data-theme="dark"] .btn-primary:hover{background:#1d4ed8}
+.btn-primary:active{transform:scale(.98);transition-duration:.05s}
+
+.social-links{display:flex;gap:14px;align-items:center}
+
+.social-link{
   color:var(--subtle);
-  font-size:.8rem;
+  display:flex;
+  align-items:center;
   transition:color .15s;
 }
 
-.contact-row a:hover{color:var(--text);text-decoration:none}
-.contact-row svg{flex-shrink:0}
+.social-link:hover{color:var(--text);text-decoration:none}
 
-/* SECTIONS */
-section{margin-bottom:40px}
-
-.section-label{
-  font-size:.62rem;
-  font-weight:600;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--subtle);
-  padding-bottom:10px;
-  border-bottom:1px solid var(--border);
-  margin-bottom:18px;
+/* ABOUT BLURB */
+.about-blurb{
+  font-size:1rem;
+  color:var(--muted);
+  line-height:1.8;
+  max-width:580px;
+  margin-bottom:64px;
+  text-wrap:pretty;
 }
 
-/* ABOUT */
-.about-text{
-  font-size:.875rem;
-  color:var(--muted);
-  line-height:1.75;
-  max-width:580px;
+/* SECTIONS */
+section{margin-bottom:60px}
+
+.section-label{
+  font-size:.6rem;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--subtle);
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:24px;
 }
 
 /* VENTURES */
 .ventures{
   display:flex;
   flex-direction:column;
-  gap:12px;
+  gap:10px;
 }
 
 .venture-card{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:10px;
-  padding:16px 18px 16px 20px;
+  border-radius:12px;
+  padding:20px 22px 20px 24px;
   position:relative;
   overflow:hidden;
-  transition:border-color .15s;
+  transition:border-color .15s,box-shadow .15s,transform .15s;
 }
 
-.venture-card:hover{border-color:var(--muted)}
+.venture-card:hover{
+  border-color:var(--muted);
+  transform:translateY(-1px);
+  box-shadow:0 4px 16px rgba(0,0,0,.06);
+}
+
+[data-theme="dark"] .venture-card:hover{
+  box-shadow:0 4px 16px rgba(0,0,0,.3);
+}
 
 .venture-card::before{
   content:'';
@@ -166,6 +213,7 @@ section{margin-bottom:40px}
   left:0;top:0;bottom:0;
   width:3px;
   background:var(--vc,var(--accent));
+  border-radius:3px 0 0 3px;
 }
 
 .venture-head{
@@ -173,11 +221,15 @@ section{margin-bottom:40px}
   align-items:center;
   justify-content:space-between;
   gap:8px;
-  margin-bottom:6px;
+  margin-bottom:8px;
   flex-wrap:wrap;
 }
 
-.venture-name{font-size:.875rem;font-weight:600}
+.venture-name{
+  font-size:.95rem;
+  font-weight:600;
+  letter-spacing:-.01em;
+}
 
 .venture-url{
   display:inline-flex;
@@ -191,10 +243,10 @@ section{margin-bottom:40px}
 .venture-url:hover{color:var(--text);text-decoration:none}
 
 .venture-desc{
-  font-size:.825rem;
+  font-size:.875rem;
   color:var(--muted);
-  line-height:1.65;
-  margin-bottom:10px;
+  line-height:1.7;
+  margin-bottom:12px;
 }
 
 .tags{display:flex;flex-wrap:wrap;gap:5px}
@@ -204,72 +256,117 @@ section{margin-bottom:40px}
   border:1px solid var(--border);
   border-radius:4px;
   color:var(--muted);
-  font-size:.69rem;
-  padding:2px 7px;
+  font-size:.68rem;
+  font-weight:500;
+  padding:2px 8px;
 }
 
-/* EXPERIENCE */
-.exp-list{display:flex;flex-direction:column;gap:20px}
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
 
-.exp-head{
+.service-item{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px 20px;
+}
+
+.service-name{
+  font-size:.875rem;
+  font-weight:600;
+  letter-spacing:-.01em;
+  margin-bottom:6px;
+}
+
+.service-desc{
+  font-size:.82rem;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+/* CLIENTS */
+.clients-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.client-head{
   display:flex;
   justify-content:space-between;
   align-items:baseline;
   flex-wrap:wrap;
   gap:4px;
-  margin-bottom:2px;
+  margin-bottom:4px;
 }
 
-.exp-company{font-size:.875rem;font-weight:600}
-.exp-note{font-weight:400;color:var(--subtle);font-size:.78rem}
-.exp-period{font-size:.75rem;color:var(--subtle);white-space:nowrap}
-.exp-role{font-size:.8rem;color:var(--muted);margin-bottom:4px}
-.exp-desc{font-size:.8rem;color:var(--muted);line-height:1.65}
+.client-name{font-size:.9rem;font-weight:600}
 
-/* SKILLS */
-.skill-grid{display:flex;flex-direction:column;gap:7px}
-
-.skill-row{
-  display:flex;
-  align-items:baseline;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-.skill-label{
+.client-period{
   font-size:.73rem;
   color:var(--subtle);
-  min-width:88px;
-  flex-shrink:0;
+  white-space:nowrap;
 }
 
-.skill-tags{display:flex;flex-wrap:wrap;gap:4px}
+.client-desc{
+  font-size:.845rem;
+  color:var(--muted);
+  line-height:1.65;
+}
 
-.skill-tag{
+/* CTA */
+.cta-section{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:4px;
+  border-radius:14px;
+  padding:40px 36px;
+  text-align:center;
+  margin-bottom:0;
+}
+
+.cta-section h2{
+  font-size:1.65rem;
+  font-weight:700;
+  letter-spacing:-.03em;
+  margin-bottom:10px;
+  text-wrap:balance;
+}
+
+.cta-section p{
+  font-size:.9rem;
   color:var(--muted);
-  font-size:.69rem;
-  padding:2px 7px;
+  line-height:1.65;
+  max-width:360px;
+  margin:0 auto 24px;
 }
 
 /* FOOTER */
 footer{
-  margin-top:48px;
-  padding-top:16px;
+  margin-top:36px;
+  padding-top:18px;
   border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px;
   font-size:.77rem;
   color:var(--subtle);
 }
 
 /* MOBILE */
-@media(max-width:500px){
-  .container{padding:28px 18px 60px}
-  header h1{font-size:1.4rem}
-  .skill-row{flex-direction:column;gap:3px}
-  .skill-label{min-width:unset}
-  .exp-head{flex-direction:column;gap:2px}
+@media(max-width:560px){
+  .container{padding:28px 18px 72px}
+  header h1{font-size:2.1rem}
+  .studio-tagline{font-size:.95rem}
+  .services-grid{grid-template-columns:1fr}
+  .cta-section{padding:28px 20px}
+  .cta-section h2{font-size:1.35rem}
+  footer{flex-direction:column;align-items:flex-start;gap:3px}
 }
 </style>
 </head>
@@ -282,31 +379,25 @@ footer{
   </div>
 
   <header>
-    <h1>Tomas Sexenian</h1>
-    <p class="tagline" data-i18n="tagline">Senior AI Platform &amp; MLOps Engineer &middot; Founder</p>
-    <div class="contact-row">
-      <a href="https://github.com/tomas-sexenian" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        github.com/tomas-sexenian
-      </a>
-      <a href="https://linkedin.com/in/tomassexenian" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        linkedin.com/in/tomassexenian
-      </a>
-      <a href="mailto:cuentastomassexenian@gmail.com">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        cuentastomassexenian@gmail.com
-      </a>
+    <h1>Sexenian Studio</h1>
+    <p class="studio-tagline" data-i18n="studio_tagline">We design and build digital products and AI tools for businesses ready to move faster.</p>
+    <div class="hero-actions">
+      <a href="mailto:cuentastomassexenian@gmail.com" class="btn-primary" data-i18n="cta_hero">Get in touch &rarr;</a>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/tomassexenian" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/tomas-sexenian" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <section>
-    <p class="section-label" data-i18n="lbl_about">About</p>
-    <p class="about-text" data-i18n="about_text">I build production AI systems and data platforms, and found companies on top of that work. 6+ years shipping multi-agent LLM pipelines, MLOps infrastructure, and cloud-native backends across AWS, Azure, and GCP. Based in Uruguay, working globally.</p>
-  </section>
+  <p class="about-blurb" data-i18n="studio_about">A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide &mdash; turning complex problems into software people actually use.</p>
 
   <section>
-    <p class="section-label" data-i18n="lbl_ventures">Ventures</p>
+    <p class="section-label" data-i18n="lbl_products">Products we&rsquo;ve built</p>
     <div class="ventures">
 
       <div class="venture-card" style="--vc:#b84c2b">
@@ -317,12 +408,10 @@ footer{
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1 8L8 1M8 1H2.5M8 1V6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <p class="venture-desc" data-i18n="remy_desc">Restaurant operating system. Live QR menus, one-touch WhatsApp supplier ordering, perpetual inventory, and a recipe costing engine that recalculates dish margins when ingredient prices change.</p>
+        <p class="venture-desc" data-i18n="remy_desc">A complete operating system for restaurants. Digital menus, automated supplier orders, live inventory tracking, and smart cost management &mdash; all in one place.</p>
         <div class="tags">
-          <span class="tag">Multi-tenant SaaS</span>
-          <span class="tag">WebSockets</span>
-          <span class="tag">WhatsApp API</span>
-          <span class="tag">AI-assisted</span>
+          <span class="tag" data-i18n="tag_restaurants">For restaurants</span>
+          <span class="tag" data-i18n="tag_live">Live</span>
         </div>
       </div>
 
@@ -334,12 +423,10 @@ footer{
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1 8L8 1M8 1H2.5M8 1V6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <p class="venture-desc" data-i18n="sibyl_desc">Synthetic society simulation for validating ideas before you build them. Run your product, message, or campaign against up to 200 AI personas with distinct profiles. A verdict in under a minute.</p>
+        <p class="venture-desc" data-i18n="sibyl_desc">Test your ideas before you spend. Sibyl simulates hundreds of real customer profiles and gives you honest feedback on your product, message, or campaign &mdash; in under a minute.</p>
         <div class="tags">
-          <span class="tag">LLM Evaluation</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">LangGraph</span>
-          <span class="tag">Next.js</span>
+          <span class="tag" data-i18n="tag_founders">For founders &amp; marketers</span>
+          <span class="tag" data-i18n="tag_live">Live</span>
         </div>
       </div>
 
@@ -351,12 +438,11 @@ footer{
             <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1 8L8 1M8 1H2.5M8 1V6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <p class="venture-desc" data-i18n="mercado_desc">Price intelligence for e-commerce. Tracks prices and stock across 6+ live sources with AI-powered product matching, competitive dashboards, and automated alerts. Stores pay for intelligence; buyers compare for free.</p>
+        <p class="venture-desc" data-i18n="mercado_desc">Always know what your competitors are charging. Mercado Intel tracks prices and stock across the market, sends instant alerts, and keeps you a step ahead &mdash; without any manual work.</p>
         <div class="tags">
-          <span class="tag">Price Intelligence</span>
-          <span class="tag">Web Scraping</span>
-          <span class="tag">AI Matching</span>
+          <span class="tag" data-i18n="tag_ecommerce">For online stores</span>
           <span class="tag">LATAM</span>
+          <span class="tag" data-i18n="tag_live">Live</span>
         </div>
       </div>
 
@@ -364,149 +450,143 @@ footer{
   </section>
 
   <section>
-    <p class="section-label" data-i18n="lbl_experience">Experience</p>
-    <div class="exp-list">
+    <p class="section-label" data-i18n="lbl_services">What we do</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <p class="service-name" data-i18n="svc1_name">Custom software</p>
+        <p class="service-desc" data-i18n="svc1_desc">Web apps and digital tools built around how your business actually works.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-name" data-i18n="svc2_name">AI &amp; automation</p>
+        <p class="service-desc" data-i18n="svc2_desc">Intelligent systems that handle repetitive tasks and surface the right information, faster.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-name" data-i18n="svc3_name">Data &amp; dashboards</p>
+        <p class="service-desc" data-i18n="svc3_desc">Clear, real-time views of your business performance &mdash; no spreadsheets needed.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-name" data-i18n="svc4_name">Technical co-founding</p>
+        <p class="service-desc" data-i18n="svc4_desc">We partner with founders who have the vision and need someone to build it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label" data-i18n="lbl_clients">Past clients</p>
+    <div class="clients-list">
 
       <div>
-        <div class="exp-head">
-          <span class="exp-company">Zyte <span class="exp-note">(formerly ScrapingHub)</span></span>
-          <span class="exp-period">2023 - Present</span>
+        <div class="client-head">
+          <span class="client-name">Zyte</span>
+          <span class="client-period">2023 &ndash; Present</span>
         </div>
-        <p class="exp-role" data-i18n="zyte_role">Senior Automation &amp; AI Engineer</p>
-        <p class="exp-desc" data-i18n="zyte_desc">Built LLMNL, a production multi-agent LLM platform for automated data-quality assurance, cutting manual QA review effort 50%+ across 20+ pipelines. Multi-provider model serving (OpenAI, Anthropic, Gemini), end-to-end LLM observability via Langfuse, MCP server, Cloud Run.</p>
+        <p class="client-desc" data-i18n="zyte_desc">Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.</p>
       </div>
 
       <div>
-        <div class="exp-head">
-          <span class="exp-company">Valvoline</span>
-          <span class="exp-period">2025 - Present</span>
+        <div class="client-head">
+          <span class="client-name">Valvoline</span>
+          <span class="client-period">2025 &ndash; Present</span>
         </div>
-        <p class="exp-role" data-i18n="valvoline_role">Senior Automation Engineer (Freelance)</p>
-        <p class="exp-desc" data-i18n="valvoline_desc">SAP-to-AWS modernization: replaced on-premise BI dashboards and legacy ETL with cloud-native pipelines on S3, Athena, and Glue.</p>
+        <p class="client-desc" data-i18n="valvoline_desc">Modernized their reporting infrastructure &mdash; moving from outdated on-premise software to live dashboards accessible from anywhere.</p>
       </div>
 
       <div>
-        <div class="exp-head">
-          <span class="exp-company">Kroger / 84.51&deg;</span>
-          <span class="exp-period">2025 - Present</span>
+        <div class="client-head">
+          <span class="client-name">Kroger / 84.51&deg;</span>
+          <span class="client-period">2025 &ndash; Present</span>
         </div>
-        <p class="exp-role" data-i18n="kroger_role">Senior Engineer (Freelance)</p>
-        <p class="exp-desc" data-i18n="kroger_desc">LLM-augmented PySpark pipeline for automated weekly brand-performance reports. Containerized ML services on Azure Kubernetes Service.</p>
+        <p class="client-desc" data-i18n="kroger_desc">Automated weekly brand performance reports using AI, replacing a manual process that previously took days.</p>
       </div>
 
       <div>
-        <div class="exp-head">
-          <span class="exp-company">Globant</span>
-          <span class="exp-period">2020 - 2024</span>
+        <div class="client-head">
+          <span class="client-name">Globant</span>
+          <span class="client-period">2020 &ndash; 2024</span>
         </div>
-        <p class="exp-role" data-i18n="globant_role">Senior Backend Developer</p>
-        <p class="exp-desc" data-i18n="globant_desc">GeneXus platform features: .NET and Java code generators, PDF reporting engine, and a custom AWS S3 client wrapper for enterprise development teams.</p>
+        <p class="client-desc" data-i18n="globant_desc">Delivered core platform features shipped to enterprise development teams in over 40 countries.</p>
       </div>
 
     </div>
   </section>
 
-  <section>
-    <p class="section-label" data-i18n="lbl_skills">Skills</p>
-    <div class="skill-grid">
-      <div class="skill-row">
-        <span class="skill-label" data-i18n="sk_ai">AI / ML</span>
-        <div class="skill-tags">
-          <span class="skill-tag">Multi-agent LLM</span>
-          <span class="skill-tag">LLM Evaluation</span>
-          <span class="skill-tag">RAG</span>
-          <span class="skill-tag">Model Serving</span>
-          <span class="skill-tag">LLM Observability</span>
-          <span class="skill-tag">MLOps / LLMOps</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label" data-i18n="sk_cloud">Cloud</span>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">GCP</span>
-          <span class="skill-tag">Azure</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Kubernetes</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label" data-i18n="sk_backend">Backend</span>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Redis</span>
-          <span class="skill-tag">Celery</span>
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">.NET</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label" data-i18n="sk_frontend">Frontend</span>
-        <div class="skill-tags">
-          <span class="skill-tag">Next.js</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">TypeScript</span>
-        </div>
-      </div>
-    </div>
+  <section class="cta-section">
+    <h2 data-i18n="cta_heading">Have a project in mind?</h2>
+    <p data-i18n="cta_sub">We&rsquo;re open to new engagements. Tell us what you&rsquo;re building.</p>
+    <a href="mailto:cuentastomassexenian@gmail.com" class="btn-primary" data-i18n="cta_main_btn">Get in touch &rarr;</a>
   </section>
 
   <footer>
-    <p data-i18n="footer">Montevideo, Uruguay &middot; Open to relocation</p>
+    <span data-i18n="footer_main">Sexenian Studio &middot; Montevideo, Uruguay</span>
+    <span data-i18n="footer_sub">Led by Tomas Sexenian</span>
   </footer>
 
 </div>
 <script>
 var T={
   en:{
-    tagline:'Senior AI Platform &amp; MLOps Engineer &middot; Founder',
-    lbl_about:'About',
-    about_text:'I build production AI systems and data platforms, and found companies on top of that work. 6+ years shipping multi-agent LLM pipelines, MLOps infrastructure, and cloud-native backends across AWS, Azure, and GCP. Based in Uruguay, working globally.',
-    lbl_ventures:'Ventures',
-    remy_desc:'Restaurant operating system. Live QR menus, one-touch WhatsApp supplier ordering, perpetual inventory, and a recipe costing engine that recalculates dish margins when ingredient prices change.',
-    sibyl_desc:'Synthetic society simulation for validating ideas before you build them. Run your product, message, or campaign against up to 200 AI personas with distinct profiles. A verdict in under a minute.',
-    mercado_desc:'Price intelligence for e-commerce. Tracks prices and stock across 6+ live sources with AI-powered product matching, competitive dashboards, and automated alerts. Stores pay for intelligence; buyers compare for free.',
-    lbl_experience:'Experience',
-    zyte_role:'Senior Automation &amp; AI Engineer',
-    zyte_desc:'Built LLMNL, a production multi-agent LLM platform for automated data-quality assurance, cutting manual QA review effort 50%+ across 20+ pipelines. Multi-provider model serving (OpenAI, Anthropic, Gemini), end-to-end LLM observability via Langfuse, MCP server, Cloud Run.',
-    valvoline_role:'Senior Automation Engineer (Freelance)',
-    valvoline_desc:'SAP-to-AWS modernization: replaced on-premise BI dashboards and legacy ETL with cloud-native pipelines on S3, Athena, and Glue.',
-    kroger_role:'Senior Engineer (Freelance)',
-    kroger_desc:'LLM-augmented PySpark pipeline for automated weekly brand-performance reports. Containerized ML services on Azure Kubernetes Service.',
-    globant_role:'Senior Backend Developer',
-    globant_desc:'GeneXus platform features: .NET and Java code generators, PDF reporting engine, and a custom AWS S3 client wrapper for enterprise development teams.',
-    lbl_skills:'Skills',
-    sk_ai:'AI / ML',
-    sk_cloud:'Cloud',
-    sk_backend:'Backend',
-    sk_frontend:'Frontend',
-    footer:'Montevideo, Uruguay &middot; Open to relocation'
+    studio_tagline:'We design and build digital products and AI tools for businesses ready to move faster.',
+    studio_about:'A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide — turning complex problems into software people actually use.',
+    cta_hero:'Get in touch →',
+    lbl_products:'Products we’ve built',
+    remy_desc:'A complete operating system for restaurants. Digital menus, automated supplier orders, live inventory tracking, and smart cost management — all in one place.',
+    sibyl_desc:'Test your ideas before you spend. Sibyl simulates hundreds of real customer profiles and gives you honest feedback on your product, message, or campaign — in under a minute.',
+    mercado_desc:'Always know what your competitors are charging. Mercado Intel tracks prices and stock across the market, sends instant alerts, and keeps you a step ahead — without any manual work.',
+    tag_restaurants:'For restaurants',
+    tag_founders:'For founders &amp; marketers',
+    tag_ecommerce:'For online stores',
+    tag_live:'Live',
+    lbl_services:'What we do',
+    svc1_name:'Custom software',
+    svc1_desc:'Web apps and digital tools built around how your business actually works.',
+    svc2_name:'AI &amp; automation',
+    svc2_desc:'Intelligent systems that handle repetitive tasks and surface the right information, faster.',
+    svc3_name:'Data &amp; dashboards',
+    svc3_desc:'Clear, real-time views of your business performance — no spreadsheets needed.',
+    svc4_name:'Technical co-founding',
+    svc4_desc:'We partner with founders who have the vision and need someone to build it.',
+    lbl_clients:'Past clients',
+    zyte_desc:'Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.',
+    valvoline_desc:'Modernized their reporting infrastructure — moving from outdated on-premise software to live dashboards accessible from anywhere.',
+    kroger_desc:'Automated weekly brand performance reports using AI, replacing a manual process that previously took days.',
+    globant_desc:'Delivered core platform features shipped to enterprise development teams in over 40 countries.',
+    cta_heading:'Have a project in mind?',
+    cta_sub:'We’re open to new engagements. Tell us what you’re building.',
+    cta_main_btn:'Get in touch →',
+    footer_main:'Sexenian Studio · Montevideo, Uruguay',
+    footer_sub:'Led by Tomas Sexenian'
   },
   es:{
-    tagline:'Ingeniero Senior AI Platform &amp; MLOps &middot; Fundador',
-    lbl_about:'Sobre m&iacute;',
-    about_text:'Construyo sistemas de IA y plataformas de datos en producci&oacute;n, y fundo empresas sobre ese trabajo. 6+ a&ntilde;os con pipelines LLM multi-agente, infraestructura MLOps e backends cloud en AWS, Azure y GCP. Basado en Uruguay, trabajo globalmente.',
-    lbl_ventures:'Proyectos',
-    remy_desc:'Sistema operativo para restaurantes. Carta QR en vivo, pedidos a proveedores por WhatsApp, inventario perpetuo y motor de rentabilidad de recetas que recalcula m&aacute;rgenes cuando cambian los precios de insumos.',
-    sibyl_desc:'Simulaci&oacute;n de sociedad sint&eacute;tica para validar ideas antes de construirlas. Prob&aacute; tu producto, mensaje o campa&ntilde;a contra hasta 200 personas sint&eacute;ticas con perfiles distintos. Un veredicto en menos de un minuto.',
-    mercado_desc:'Inteligencia de precios para e-commerce. Rastrea precios y stock en 6+ fuentes en vivo con matching de productos con IA, dashboards competitivos y alertas autom&aacute;ticas. Las tiendas pagan por inteligencia; los compradores comparan gratis.',
-    lbl_experience:'Experiencia',
-    zyte_role:'Ingeniero Senior de Automatizaci&oacute;n e IA',
-    zyte_desc:'Constru&iacute; LLMNL, plataforma LLM multi-agente en producci&oacute;n para control de calidad de datos automatizado, reduciendo esfuerzo de QA manual 50%+ en 20+ pipelines. Multi-proveedor (OpenAI, Anthropic, Gemini), observabilidad LLM end-to-end con Langfuse, servidor MCP, Cloud Run.',
-    valvoline_role:'Ingeniero Senior de Automatizaci&oacute;n (Freelance)',
-    valvoline_desc:'Modernizaci&oacute;n SAP-a-AWS: reemplace dashboards BI on-premise y ETL legado con pipelines cloud en S3, Athena y Glue.',
-    kroger_role:'Ingeniero Senior (Freelance)',
-    kroger_desc:'Pipeline PySpark aumentado con LLM para reportes semanales automatizados de rendimiento de marca. Servicios ML containerizados en Azure Kubernetes Service.',
-    globant_role:'Desarrollador Backend Senior',
-    globant_desc:'Funcionalidades para la plataforma GeneXus: generadores de c&oacute;digo .NET y Java, motor de reportes PDF y wrapper cliente AWS S3 para equipos de desarrollo enterprise.',
-    lbl_skills:'Habilidades',
-    sk_ai:'IA / ML',
-    sk_cloud:'Cloud',
-    sk_backend:'Backend',
-    sk_frontend:'Frontend',
-    footer:'Montevideo, Uruguay &middot; Abierto a reubicaci&oacute;n'
+    studio_tagline:'Diseñamos y construimos productos digitales y herramientas con IA para empresas que quieren moverse más rápido.',
+    studio_about:'Un estudio pequeño y experimentado basado en Montevideo. Trabajamos con startups y empresas de todo el mundo — convirtiendo problemas complejos en software que la gente realmente usa.',
+    cta_hero:'Escribinos →',
+    lbl_products:'Productos que construimos',
+    remy_desc:'Un sistema operativo completo para restaurantes. Carta digital, pedidos automáticos a proveedores, inventario en tiempo real y gestión de costos inteligente — todo en un solo lugar.',
+    sibyl_desc:'Probá tus ideas antes de gastar. Sibyl simula cientos de perfiles de clientes reales y te da feedback honesto sobre tu producto, mensaje o campaña — en menos de un minuto.',
+    mercado_desc:'Siempre sabé lo que cobran tus competidores. Mercado Intel rastrea precios y stock en todo el mercado, envía alertas instantáneas y te mantiene un paso adelante — sin trabajo manual.',
+    tag_restaurants:'Para restaurantes',
+    tag_founders:'Para fundadores &amp; marketers',
+    tag_ecommerce:'Para tiendas online',
+    tag_live:'En vivo',
+    lbl_services:'Qué hacemos',
+    svc1_name:'Software a medida',
+    svc1_desc:'Aplicaciones web y herramientas digitales construidas para cómo funciona tu negocio.',
+    svc2_name:'IA &amp; automatización',
+    svc2_desc:'Sistemas inteligentes que manejan tareas repetitivas y muestran la información correcta, más rápido.',
+    svc3_name:'Datos &amp; dashboards',
+    svc3_desc:'Vistas claras y en tiempo real del rendimiento de tu negocio — sin planillas.',
+    svc4_name:'Co-fundación técnica',
+    svc4_desc:'Nos asociamos con fundadores que tienen la visión y necesitan a alguien que la construya.',
+    lbl_clients:'Clientes anteriores',
+    zyte_desc:'Construímos un sistema de IA que automatizó controles de calidad en decenas de pipelines activos, reduciendo el tiempo de revisión manual a la mitad.',
+    valvoline_desc:'Modernizamos su infraestructura de reportes — migrando de software heredado a dashboards en la nube accesibles desde cualquier lugar.',
+    kroger_desc:'Automatizamos los reportes semanales de rendimiento de marca con IA, reemplazando un proceso manual que antes tomaba días.',
+    globant_desc:'Entregamos funcionalidades core de plataforma distribuidas a equipos enterprise en más de 40 países.',
+    cta_heading:'¿Tenés un proyecto en mente?',
+    cta_sub:'Estamos abiertos a nuevos proyectos. Contános qué estás construyendo.',
+    cta_main_btn:'Escribinos →',
+    footer_main:'Sexenian Studio · Montevideo, Uruguay',
+    footer_sub:'Liderado por Tomas Sexenian'
   }
 };
 

@@ -312,6 +312,17 @@ section{margin-bottom:60px}
   white-space:nowrap;
 }
 
+.client-meta{display:flex;align-items:baseline;gap:8px}
+
+.work-type{
+  font-size:.68rem;
+  font-weight:500;
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:1px 7px;
+}
+
 .client-desc{
   font-size:.845rem;
   color:var(--muted);
@@ -397,7 +408,7 @@ footer{
   <p class="about-blurb" data-i18n="studio_about">A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide &mdash; turning complex problems into software people actually use.</p>
 
   <section>
-    <p class="section-label" data-i18n="lbl_products">Products we&rsquo;ve built</p>
+    <p class="section-label" data-i18n="lbl_products">Our products</p>
     <div class="ventures">
 
       <div class="venture-card" style="--vc:#b84c2b">
@@ -472,13 +483,16 @@ footer{
   </section>
 
   <section>
-    <p class="section-label" data-i18n="lbl_clients">Past clients</p>
+    <p class="section-label" data-i18n="lbl_clients">Experience</p>
     <div class="clients-list">
 
       <div>
         <div class="client-head">
           <span class="client-name">Zyte</span>
-          <span class="client-period">2023 &ndash; Present</span>
+          <div class="client-meta">
+            <span class="work-type" data-i18n="wt_fulltime">Full-time</span>
+            <span class="client-period">2023 &ndash; Present</span>
+          </div>
         </div>
         <p class="client-desc" data-i18n="zyte_desc">Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.</p>
       </div>
@@ -486,7 +500,10 @@ footer{
       <div>
         <div class="client-head">
           <span class="client-name">Valvoline</span>
-          <span class="client-period">2025 &ndash; Present</span>
+          <div class="client-meta">
+            <span class="work-type" data-i18n="wt_contract">Contract</span>
+            <span class="client-period">2025 &ndash; Present</span>
+          </div>
         </div>
         <p class="client-desc" data-i18n="valvoline_desc">Modernized their reporting infrastructure &mdash; moving from outdated on-premise software to live dashboards accessible from anywhere.</p>
       </div>
@@ -494,7 +511,10 @@ footer{
       <div>
         <div class="client-head">
           <span class="client-name">Kroger / 84.51&deg;</span>
-          <span class="client-period">2025 &ndash; Present</span>
+          <div class="client-meta">
+            <span class="work-type" data-i18n="wt_contract">Contract</span>
+            <span class="client-period">2025 &ndash; Present</span>
+          </div>
         </div>
         <p class="client-desc" data-i18n="kroger_desc">Automated weekly brand performance reports using AI, replacing a manual process that previously took days.</p>
       </div>
@@ -502,7 +522,10 @@ footer{
       <div>
         <div class="client-head">
           <span class="client-name">Globant</span>
-          <span class="client-period">2020 &ndash; 2024</span>
+          <div class="client-meta">
+            <span class="work-type" data-i18n="wt_fulltime">Full-time</span>
+            <span class="client-period">2020 &ndash; 2024</span>
+          </div>
         </div>
         <p class="client-desc" data-i18n="globant_desc">Delivered core platform features shipped to enterprise development teams in over 40 countries.</p>
       </div>
@@ -528,7 +551,7 @@ var T={
     studio_tagline:'We design and build digital products and AI tools for businesses ready to move faster.',
     studio_about:'A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide — turning complex problems into software people actually use.',
     cta_hero:'Get in touch →',
-    lbl_products:'Products we’ve built',
+    lbl_products:’Our products’,
     remy_desc:'A complete operating system for restaurants. Digital menus, automated supplier orders, live inventory tracking, and smart cost management — all in one place.',
     sibyl_desc:'Test your ideas before you spend. Sibyl simulates hundreds of real customer profiles and gives you honest feedback on your product, message, or campaign — in under a minute.',
     mercado_desc:'Always know what your competitors are charging. Mercado Intel tracks prices and stock across the market, sends instant alerts, and keeps you a step ahead — without any manual work.',
@@ -545,7 +568,9 @@ var T={
     svc3_desc:'Clear, real-time views of your business performance — no spreadsheets needed.',
     svc4_name:'Technical co-founding',
     svc4_desc:'We partner with founders who have the vision and need someone to build it.',
-    lbl_clients:'Past clients',
+    lbl_clients:'Experience',
+    wt_fulltime:'Full-time',
+    wt_contract:'Contract',
     zyte_desc:'Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.',
     valvoline_desc:'Modernized their reporting infrastructure — moving from outdated on-premise software to live dashboards accessible from anywhere.',
     kroger_desc:'Automated weekly brand performance reports using AI, replacing a manual process that previously took days.',
@@ -560,7 +585,7 @@ var T={
     studio_tagline:'Diseñamos y construimos productos digitales y herramientas con IA para empresas que quieren moverse más rápido.',
     studio_about:'Un estudio pequeño y experimentado basado en Montevideo. Trabajamos con startups y empresas de todo el mundo — convirtiendo problemas complejos en software que la gente realmente usa.',
     cta_hero:'Escribinos →',
-    lbl_products:'Productos que construimos',
+    lbl_products:'Nuestros productos',
     remy_desc:'Un sistema operativo completo para restaurantes. Carta digital, pedidos automáticos a proveedores, inventario en tiempo real y gestión de costos inteligente — todo en un solo lugar.',
     sibyl_desc:'Probá tus ideas antes de gastar. Sibyl simula cientos de perfiles de clientes reales y te da feedback honesto sobre tu producto, mensaje o campaña — en menos de un minuto.',
     mercado_desc:'Siempre sabé lo que cobran tus competidores. Mercado Intel rastrea precios y stock en todo el mercado, envía alertas instantáneas y te mantiene un paso adelante — sin trabajo manual.',
@@ -577,7 +602,9 @@ var T={
     svc3_desc:'Vistas claras y en tiempo real del rendimiento de tu negocio — sin planillas.',
     svc4_name:'Co-fundación técnica',
     svc4_desc:'Nos asociamos con fundadores que tienen la visión y necesitan a alguien que la construya.',
-    lbl_clients:'Clientes anteriores',
+    lbl_clients:'Experiencia',
+    wt_fulltime:'Tiempo completo',
+    wt_contract:'Contrato',
     zyte_desc:'Construímos un sistema de IA que automatizó controles de calidad en decenas de pipelines activos, reduciendo el tiempo de revisión manual a la mitad.',
     valvoline_desc:'Modernizamos su infraestructura de reportes — migrando de software heredado a dashboards en la nube accesibles desde cualquier lugar.',
     kroger_desc:'Automatizamos los reportes semanales de rendimiento de marca con IA, reemplazando un proceso manual que antes tomaba días.',

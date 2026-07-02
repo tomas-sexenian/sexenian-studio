@@ -364,10 +364,13 @@ footer{
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
-  gap:6px;
+  gap:6px 16px;
   font-size:.77rem;
   color:var(--subtle);
 }
+
+.legal-links a{color:var(--subtle)}
+.legal-links a:hover{color:var(--text);text-decoration:none}
 
 /* MOBILE */
 @media(max-width:560px){
@@ -405,7 +408,7 @@ footer{
     </div>
   </header>
 
-  <p class="about-blurb" data-i18n="studio_about">A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide &mdash; turning complex problems into software people actually use.</p>
+  <p class="about-blurb" data-i18n="studio_about">A small, senior studio based in Uruguay. We partner with startups and established businesses worldwide &mdash; turning complex problems into software people actually use.</p>
 
   <section>
     <p class="section-label" data-i18n="lbl_products">Our products</p>
@@ -540,8 +543,9 @@ footer{
   </section>
 
   <footer>
-    <span data-i18n="footer_main">Sexenian Studio &middot; Montevideo, Uruguay</span>
+    <span data-i18n="footer_main">Sexenian Studio &middot; Solymar, Canelones, Uruguay</span>
     <span data-i18n="footer_sub">Led by Tomas Sexenian</span>
+    <span class="legal-links"><a href="/sexenian-studio/terms.html" data-i18n="footer_terms">Terms</a> &middot; <a href="/sexenian-studio/privacy.html" data-i18n="footer_privacy">Privacy</a></span>
   </footer>
 
 </div>
@@ -549,7 +553,7 @@ footer{
 var T={
   en:{
     studio_tagline:'We design and build digital products and AI tools for businesses ready to move faster.',
-    studio_about:'A small, senior studio based in Montevideo. We partner with startups and established businesses worldwide — turning complex problems into software people actually use.',
+    studio_about:'A small, senior studio based in Uruguay. We partner with startups and established businesses worldwide — turning complex problems into software people actually use.',
     cta_hero:'Get in touch →',
     lbl_products:’Our products’,
     remy_desc:'A complete operating system for restaurants. Digital menus, automated supplier orders, live inventory tracking, and smart cost management — all in one place.',
@@ -578,12 +582,14 @@ var T={
     cta_heading:'Have a project in mind?',
     cta_sub:'We’re open to new engagements. Tell us what you’re building.',
     cta_main_btn:'Get in touch →',
-    footer_main:'Sexenian Studio · Montevideo, Uruguay',
-    footer_sub:'Led by Tomas Sexenian'
+    footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
+    footer_sub:'Led by Tomas Sexenian',
+    footer_terms:'Terms',
+    footer_privacy:'Privacy'
   },
   es:{
     studio_tagline:'Diseñamos y construimos productos digitales y herramientas con IA para empresas que quieren moverse más rápido.',
-    studio_about:'Un estudio pequeño y experimentado basado en Montevideo. Trabajamos con startups y empresas de todo el mundo — convirtiendo problemas complejos en software que la gente realmente usa.',
+    studio_about:'Un estudio pequeño y experimentado basado en Uruguay. Trabajamos con startups y empresas de todo el mundo — convirtiendo problemas complejos en software que la gente realmente usa.',
     cta_hero:'Escribinos →',
     lbl_products:'Nuestros productos',
     remy_desc:'Un sistema operativo completo para restaurantes. Carta digital, pedidos automáticos a proveedores, inventario en tiempo real y gestión de costos inteligente — todo en un solo lugar.',
@@ -612,8 +618,10 @@ var T={
     cta_heading:'¿Tenés un proyecto en mente?',
     cta_sub:'Estamos abiertos a nuevos proyectos. Contános qué estás construyendo.',
     cta_main_btn:'Escribinos →',
-    footer_main:'Sexenian Studio · Montevideo, Uruguay',
-    footer_sub:'Liderado por Tomas Sexenian'
+    footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
+    footer_sub:'Liderado por Tomas Sexenian',
+    footer_terms:'Términos',
+    footer_privacy:'Privacidad'
   }
 };
 

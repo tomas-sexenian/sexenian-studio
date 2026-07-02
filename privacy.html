@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Sexenian Studio</title>
+<meta name="description" content="Privacy policy for Sexenian Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  (function(){
+    var s=localStorage.getItem('theme');
+    var sys=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+    document.documentElement.dataset.theme=s||sys;
+  })();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  color-scheme:light;
+  --bg:#f8f5f0;
+  --surface:#ffffff;
+  --border:#e5e0d8;
+  --text:#18160f;
+  --muted:#6b6257;
+  --subtle:#a09485;
+  --accent:#2563eb;
+}
+
+[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0d0b09;
+  --surface:#171410;
+  --border:#2a2520;
+  --text:#f0ebe4;
+  --muted:#9a9088;
+  --subtle:#6b6058;
+  --accent:#60a5fa;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Outfit',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background-color .18s,color .18s;
+}
+
+@media(prefers-reduced-motion:reduce){
+  body{transition:none}
+  html{scroll-behavior:auto}
+}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+*:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+.container{
+  max-width:680px;
+  margin:0 auto;
+  padding:48px 28px 100px;
+}
+
+.top-controls{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:6px;
+  margin-bottom:48px;
+}
+
+.back-link{
+  font-size:.8rem;
+  color:var(--muted);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.back-link:hover{color:var(--text);text-decoration:none}
+
+.toggle-group{display:flex;gap:6px}
+
+.ctrl{
+  appearance:none;
+  background:none;
+  border:1px solid var(--border);
+  border-radius:6px;
+  color:var(--subtle);
+  cursor:pointer;
+  font-family:inherit;
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.07em;
+  padding:5px 11px;
+  text-transform:uppercase;
+  transition:border-color .15s,color .15s;
+}
+.ctrl:hover{border-color:var(--muted);color:var(--text)}
+
+h1{
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:-.03em;
+  line-height:1.15;
+  margin-bottom:8px;
+  text-wrap:balance;
+}
+
+.updated{
+  font-size:.8rem;
+  color:var(--subtle);
+  margin-bottom:44px;
+}
+
+h2{
+  font-size:1.05rem;
+  font-weight:600;
+  letter-spacing:-.01em;
+  margin:38px 0 12px;
+}
+h2:first-of-type{margin-top:0}
+
+p{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.75;
+  margin-bottom:12px;
+}
+
+ul{
+  margin:0 0 12px 20px;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.75;
+}
+li{margin-bottom:6px}
+li::marker{color:var(--subtle)}
+
+strong{color:var(--text);font-weight:600}
+
+.callout{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px 18px;
+  margin:0 0 20px;
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+footer{
+  margin-top:56px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px;
+  font-size:.77rem;
+  color:var(--subtle);
+}
+
+@media(max-width:560px){
+  .container{padding:28px 18px 72px}
+  h1{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-controls">
+    <a href="/sexenian-studio/" class="back-link" data-i18n="back">&larr; Sexenian Studio</a>
+    <div class="toggle-group">
+      <button class="ctrl" id="btn-lang" onclick="toggleLang()">ES</button>
+      <button class="ctrl" id="btn-theme" onclick="toggleTheme()">Dark</button>
+    </div>
+  </div>
+
+  <h1 data-i18n="title">Privacy Policy</h1>
+  <p class="updated" data-i18n="updated">Last updated July 2026</p>
+
+  <p class="callout" data-i18n="callout">Short version: this site has no backend and no database. It's a static page. We don't collect account data, we don't run analytics or ad trackers, and the "Get in touch" button just opens your own email app — nothing passes through our servers.</p>
+
+  <h2 data-i18n="h1">1. Controller</h2>
+  <p data-i18n="p1">Sexenian Studio, operated by Tomás Sexenian, an individual based in Solymar, Ciudad de la Costa, Canelones, Uruguay. Contact: <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a>.</p>
+
+  <h2 data-i18n="h2">2. What this site does and doesn't collect</h2>
+  <ul>
+    <li data-i18n="l1"><strong>Theme preference:</strong> your dark/light choice is saved in your browser's local storage. It never leaves your device and we never see it.</li>
+    <li data-i18n="l2"><strong>Contact:</strong> the "Get in touch" link opens a pre-filled email in your own email client (<code>mailto:</code>). Whatever you send goes directly to our inbox through your email provider — this website has no contact form, no server, and never stores or transmits that message itself.</li>
+    <li data-i18n="l3"><strong>No accounts, no cookies for tracking, no analytics, no advertising pixels.</strong> We don't know who visits this site or how many times.</li>
+  </ul>
+
+  <h2 data-i18n="h3">3. Hosting and fonts</h2>
+  <p data-i18n="p3">This site is hosted on GitHub Pages (GitHub, Inc.), which may log standard technical access data (IP address, browser type, request timestamps) as part of normal web server operation — this is GitHub's infrastructure, not something we configure or access; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's own privacy statement</a>. This page's fonts are loaded from Google Fonts (fonts.googleapis.com / fonts.gstatic.com), which means your browser makes a direct request to Google's servers to fetch them, exposing your IP address to Google in the same way any embedded third-party resource would.</p>
+
+  <h2 data-i18n="h4">4. Links to other sites</h2>
+  <p data-i18n="p4">This site links to Remy, Mercado Intel, and Sibyl — each a separate product with its own Privacy Policy governing what happens if you actually use that product — and to external profiles (LinkedIn, GitHub). Their privacy practices are their own; this policy covers only this portfolio site.</p>
+
+  <h2 data-i18n="h5">5. Your rights</h2>
+  <p data-i18n="p5">Since this site doesn't collect or store personal data beyond what's described above, there's little to request access to or delete. If you have any privacy question or concern anyway, email <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a> and we'll respond directly.</p>
+
+  <h2 data-i18n="h6">6. Changes to this policy</h2>
+  <p data-i18n="p6">We may update this policy from time to time; the "last updated" date above reflects the most recent revision.</p>
+
+  <footer>
+    <span data-i18n="footer_main">Sexenian Studio · Solymar, Canelones, Uruguay</span>
+    <a href="/sexenian-studio/terms.html" data-i18n="terms_link">Terms and Conditions</a>
+  </footer>
+
+</div>
+<script>
+var T={
+  en:{
+    back:'&larr; Sexenian Studio',
+    title:'Privacy Policy',
+    updated:'Last updated July 2026',
+    callout:'Short version: this site has no backend and no database. It\'s a static page. We don\'t collect account data, we don\'t run analytics or ad trackers, and the "Get in touch" button just opens your own email app — nothing passes through our servers.',
+    h1:'1. Controller',
+    p1:'Sexenian Studio, operated by Tomás Sexenian, an individual based in Solymar, Ciudad de la Costa, Canelones, Uruguay. Contact: <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a>.',
+    h2:'2. What this site does and doesn\'t collect',
+    l1:'<strong>Theme preference:</strong> your dark/light choice is saved in your browser\'s local storage. It never leaves your device and we never see it.',
+    l2:'<strong>Contact:</strong> the "Get in touch" link opens a pre-filled email in your own email client (<code>mailto:</code>). Whatever you send goes directly to our inbox through your email provider — this website has no contact form, no server, and never stores or transmits that message itself.',
+    l3:'<strong>No accounts, no cookies for tracking, no analytics, no advertising pixels.</strong> We don\'t know who visits this site or how many times.',
+    h3:'3. Hosting and fonts',
+    p3:'This site is hosted on GitHub Pages (GitHub, Inc.), which may log standard technical access data (IP address, browser type, request timestamps) as part of normal web server operation — this is GitHub\'s infrastructure, not something we configure or access; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub\'s own privacy statement</a>. This page\'s fonts are loaded from Google Fonts (fonts.googleapis.com / fonts.gstatic.com), which means your browser makes a direct request to Google\'s servers to fetch them, exposing your IP address to Google in the same way any embedded third-party resource would.',
+    h4:'4. Links to other sites',
+    p4:'This site links to Remy, Mercado Intel, and Sibyl — each a separate product with its own Privacy Policy governing what happens if you actually use that product — and to external profiles (LinkedIn, GitHub). Their privacy practices are their own; this policy covers only this portfolio site.',
+    h5:'5. Your rights',
+    p5:'Since this site doesn\'t collect or store personal data beyond what\'s described above, there\'s little to request access to or delete. If you have any privacy question or concern anyway, email <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a> and we\'ll respond directly.',
+    h6:'6. Changes to this policy',
+    p6:'We may update this policy from time to time; the "last updated" date above reflects the most recent revision.',
+    footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
+    terms_link:'Terms and Conditions'
+  },
+  es:{
+    back:'&larr; Sexenian Studio',
+    title:'Política de Privacidad',
+    updated:'Última actualización: julio de 2026',
+    callout:'Versión corta: este sitio no tiene backend ni base de datos. Es una página estática. No recopilamos datos de cuenta, no usamos analíticas ni rastreadores publicitarios, y el botón "Escribinos" simplemente abre tu propia app de correo — nada pasa por nuestros servidores.',
+    h1:'1. Responsable del tratamiento',
+    p1:'Sexenian Studio, operado por Tomás Sexenian, persona física con base en Solymar, Ciudad de la Costa, Canelones, Uruguay. Contacto: <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a>.',
+    h2:'2. Qué recopila este sitio (y qué no)',
+    l1:'<strong>Preferencia de tema:</strong> tu elección de modo claro/oscuro se guarda en el almacenamiento local de tu navegador. Nunca sale de tu dispositivo y nunca la vemos.',
+    l2:'<strong>Contacto:</strong> el enlace "Escribinos" abre un correo pre-completado en tu propio cliente de email (<code>mailto:</code>). Lo que envíes llega directamente a nuestra casilla a través de tu proveedor de correo — este sitio no tiene formulario de contacto, no tiene servidor, y nunca almacena ni transmite ese mensaje.',
+    l3:'<strong>Sin cuentas, sin cookies de seguimiento, sin analíticas, sin píxeles publicitarios.</strong> No sabemos quién visita este sitio ni cuántas veces.',
+    h3:'3. Hosting y tipografías',
+    p3:'Este sitio está alojado en GitHub Pages (GitHub, Inc.), que puede registrar datos técnicos de acceso estándar (dirección IP, tipo de navegador, marcas de tiempo) como parte del funcionamiento normal de un servidor web — esto es infraestructura de GitHub, no algo que configuremos o accedamos; ver la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">política de privacidad de GitHub</a>. Las tipografías de esta página se cargan desde Google Fonts (fonts.googleapis.com / fonts.gstatic.com), lo que significa que tu navegador hace una solicitud directa a los servidores de Google para obtenerlas, exponiendo tu dirección IP a Google, igual que cualquier recurso de terceros incrustado.',
+    h4:'4. Enlaces a otros sitios',
+    p4:'Este sitio enlaza a Remy, Mercado Intel y Sibyl — cada uno un producto separado con su propia Política de Privacidad que rige lo que ocurre si realmente usás ese producto — y a perfiles externos (LinkedIn, GitHub). Sus prácticas de privacidad son propias; esta política cubre únicamente este sitio de portafolio.',
+    h5:'5. Tus derechos',
+    p5:'Dado que este sitio no recopila ni almacena datos personales más allá de lo descrito arriba, hay poco que solicitar acceder o eliminar. Si de todas formas tenés alguna consulta o inquietud sobre privacidad, escribinos a <a href="mailto:cuentastomassexenian@gmail.com">cuentastomassexenian@gmail.com</a> y te respondemos directamente.',
+    h6:'6. Cambios a esta política',
+    p6:'Podemos actualizar esta política de tanto en tanto; la fecha de "última actualización" arriba refleja la revisión más reciente.',
+    footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
+    terms_link:'Términos y Condiciones'
+  }
+};
+
+var lang='en';
+
+function applyLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  document.getElementById('btn-lang').textContent=l==='en'?'ES':'EN';
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var key=el.dataset.i18n;
+    if(T[l][key]!==undefined)el.innerHTML=T[l][key];
+  });
+  syncThemeBtn();
+}
+
+function syncThemeBtn(){
+  var dark=document.documentElement.dataset.theme==='dark';
+  document.getElementById('btn-theme').textContent=dark
+    ?(lang==='es'?'Claro':'Light')
+    :(lang==='es'?'Oscuro':'Dark');
+}
+
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  localStorage.setItem('theme',t);
+  syncThemeBtn();
+}
+
+function toggleLang(){applyLang(lang==='en'?'es':'en')}
+
+function toggleTheme(){
+  applyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+}
+
+applyLang('en');
+syncThemeBtn();
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sexenian Studio</title>
-<meta name="description" content="We design and build software, AI tools, and digital products for businesses. Based in Uruguay, working globally.">
+<meta name="description" content="Sexenian Studio is the Uruguay-based company behind Remy, Mercado Intel, and Sibyl.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -125,25 +125,10 @@ header h1{
   flex-wrap:wrap;
 }
 
-.btn-primary{
-  display:inline-flex;
-  align-items:center;
-  background:#1d4ed8;
-  color:#fff !important;
-  border-radius:8px;
-  font-family:inherit;
+.contact-link{
   font-size:.875rem;
-  font-weight:600;
-  padding:10px 20px;
-  text-decoration:none !important;
-  transition:background .15s,transform .12s;
+  font-weight:500;
 }
-
-[data-theme="dark"] .btn-primary{background:#2563eb}
-
-.btn-primary:hover{background:#1e3a8a;transform:translateY(-1px)}
-[data-theme="dark"] .btn-primary:hover{background:#1d4ed8}
-.btn-primary:active{transform:scale(.98);transition-duration:.05s}
 
 .social-links{display:flex;gap:14px;align-items:center}
 
@@ -168,6 +153,7 @@ header h1{
 
 /* SECTIONS */
 section{margin-bottom:60px}
+section:last-of-type{margin-bottom:0}
 
 .section-label{
   font-size:.6rem;
@@ -261,100 +247,6 @@ section{margin-bottom:60px}
   padding:2px 8px;
 }
 
-/* SERVICES */
-.services-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.service-item{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:18px 20px 20px;
-}
-
-.service-name{
-  font-size:.875rem;
-  font-weight:600;
-  letter-spacing:-.01em;
-  margin-bottom:6px;
-}
-
-.service-desc{
-  font-size:.82rem;
-  color:var(--muted);
-  line-height:1.65;
-}
-
-/* CLIENTS */
-.clients-list{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-
-.client-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  flex-wrap:wrap;
-  gap:4px;
-  margin-bottom:4px;
-}
-
-.client-name{font-size:.9rem;font-weight:600}
-
-.client-period{
-  font-size:.73rem;
-  color:var(--subtle);
-  white-space:nowrap;
-}
-
-.client-meta{display:flex;align-items:baseline;gap:8px}
-
-.work-type{
-  font-size:.68rem;
-  font-weight:500;
-  color:var(--muted);
-  border:1px solid var(--border);
-  border-radius:4px;
-  padding:1px 7px;
-}
-
-.client-desc{
-  font-size:.845rem;
-  color:var(--muted);
-  line-height:1.65;
-}
-
-/* CTA */
-.cta-section{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:40px 36px;
-  text-align:center;
-  margin-bottom:0;
-}
-
-.cta-section h2{
-  font-size:1.65rem;
-  font-weight:700;
-  letter-spacing:-.03em;
-  margin-bottom:10px;
-  text-wrap:balance;
-}
-
-.cta-section p{
-  font-size:.9rem;
-  color:var(--muted);
-  line-height:1.65;
-  max-width:360px;
-  margin:0 auto 24px;
-}
-
 /* FOOTER */
 footer{
   margin-top:36px;
@@ -377,9 +269,6 @@ footer{
   .container{padding:28px 18px 72px}
   header h1{font-size:2.1rem}
   .studio-tagline{font-size:.95rem}
-  .services-grid{grid-template-columns:1fr}
-  .cta-section{padding:28px 20px}
-  .cta-section h2{font-size:1.35rem}
   footer{flex-direction:column;align-items:flex-start;gap:3px}
 }
 </style>
@@ -394,9 +283,9 @@ footer{
 
   <header>
     <h1>Sexenian Studio</h1>
-    <p class="studio-tagline" data-i18n="studio_tagline">We design and build digital products and AI tools for businesses ready to move faster.</p>
+    <p class="studio-tagline" data-i18n="studio_tagline">The company behind Remy, Mercado Intel, and Sibyl.</p>
     <div class="hero-actions">
-      <a href="mailto:cuentastomassexenian@gmail.com" class="btn-primary" data-i18n="cta_hero">Get in touch &rarr;</a>
+      <a href="mailto:cuentastomassexenian@gmail.com" class="contact-link" data-i18n="contact">Contact</a>
       <div class="social-links">
         <a href="https://linkedin.com/in/tomassexenian" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -408,7 +297,7 @@ footer{
     </div>
   </header>
 
-  <p class="about-blurb" data-i18n="studio_about">A small, senior studio based in Uruguay. We partner with startups and established businesses worldwide &mdash; turning complex problems into software people actually use.</p>
+  <p class="about-blurb" data-i18n="studio_about">Sexenian Studio is a Uruguay-based company operated by Tomás Sexenian. It builds and operates the three products below.</p>
 
   <section>
     <p class="section-label" data-i18n="lbl_products">Our products</p>
@@ -463,85 +352,6 @@ footer{
     </div>
   </section>
 
-  <section>
-    <p class="section-label" data-i18n="lbl_services">What we do</p>
-    <div class="services-grid">
-      <div class="service-item">
-        <p class="service-name" data-i18n="svc1_name">Custom software</p>
-        <p class="service-desc" data-i18n="svc1_desc">Web apps and digital tools built around how your business actually works.</p>
-      </div>
-      <div class="service-item">
-        <p class="service-name" data-i18n="svc2_name">AI &amp; automation</p>
-        <p class="service-desc" data-i18n="svc2_desc">Intelligent systems that handle repetitive tasks and surface the right information, faster.</p>
-      </div>
-      <div class="service-item">
-        <p class="service-name" data-i18n="svc3_name">Data &amp; dashboards</p>
-        <p class="service-desc" data-i18n="svc3_desc">Clear, real-time views of your business performance &mdash; no spreadsheets needed.</p>
-      </div>
-      <div class="service-item">
-        <p class="service-name" data-i18n="svc4_name">Technical co-founding</p>
-        <p class="service-desc" data-i18n="svc4_desc">We partner with founders who have the vision and need someone to build it.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <p class="section-label" data-i18n="lbl_clients">Experience</p>
-    <div class="clients-list">
-
-      <div>
-        <div class="client-head">
-          <span class="client-name">Zyte</span>
-          <div class="client-meta">
-            <span class="work-type" data-i18n="wt_fulltime">Full-time</span>
-            <span class="client-period">2023 &ndash; Present</span>
-          </div>
-        </div>
-        <p class="client-desc" data-i18n="zyte_desc">Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.</p>
-      </div>
-
-      <div>
-        <div class="client-head">
-          <span class="client-name">Valvoline</span>
-          <div class="client-meta">
-            <span class="work-type" data-i18n="wt_contract">Contract</span>
-            <span class="client-period">2025 &ndash; Present</span>
-          </div>
-        </div>
-        <p class="client-desc" data-i18n="valvoline_desc">Modernized their reporting infrastructure &mdash; moving from outdated on-premise software to live dashboards accessible from anywhere.</p>
-      </div>
-
-      <div>
-        <div class="client-head">
-          <span class="client-name">Kroger / 84.51&deg;</span>
-          <div class="client-meta">
-            <span class="work-type" data-i18n="wt_contract">Contract</span>
-            <span class="client-period">2025 &ndash; Present</span>
-          </div>
-        </div>
-        <p class="client-desc" data-i18n="kroger_desc">Automated weekly brand performance reports using AI, replacing a manual process that previously took days.</p>
-      </div>
-
-      <div>
-        <div class="client-head">
-          <span class="client-name">Globant</span>
-          <div class="client-meta">
-            <span class="work-type" data-i18n="wt_fulltime">Full-time</span>
-            <span class="client-period">2020 &ndash; 2024</span>
-          </div>
-        </div>
-        <p class="client-desc" data-i18n="globant_desc">Delivered core platform features shipped to enterprise development teams in over 40 countries.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <h2 data-i18n="cta_heading">Have a project in mind?</h2>
-    <p data-i18n="cta_sub">We&rsquo;re open to new engagements. Tell us what you&rsquo;re building.</p>
-    <a href="mailto:cuentastomassexenian@gmail.com" class="btn-primary" data-i18n="cta_main_btn">Get in touch &rarr;</a>
-  </section>
-
   <footer>
     <span data-i18n="footer_main">Sexenian Studio &middot; Solymar, Canelones, Uruguay</span>
     <span data-i18n="footer_sub">Led by Tomas Sexenian</span>
@@ -552,10 +362,10 @@ footer{
 <script>
 var T={
   en:{
-    studio_tagline:'We design and build digital products and AI tools for businesses ready to move faster.',
-    studio_about:'A small, senior studio based in Uruguay. We partner with startups and established businesses worldwide — turning complex problems into software people actually use.',
-    cta_hero:'Get in touch →',
-    lbl_products:’Our products’,
+    studio_tagline:'The company behind Remy, Mercado Intel, and Sibyl.',
+    studio_about:'Sexenian Studio is a Uruguay-based company operated by Tomás Sexenian. It builds and operates the three products below.',
+    contact:'Contact',
+    lbl_products:'Our products',
     remy_desc:'A complete operating system for restaurants. Digital menus, automated supplier orders, live inventory tracking, and smart cost management — all in one place.',
     sibyl_desc:'Test your ideas before you spend. Sibyl simulates hundreds of real customer profiles and gives you honest feedback on your product, message, or campaign — in under a minute.',
     mercado_desc:'Always know what your competitors are charging. Mercado Intel tracks prices and stock across the market, sends instant alerts, and keeps you a step ahead — without any manual work.',
@@ -563,34 +373,15 @@ var T={
     tag_founders:'For founders &amp; marketers',
     tag_ecommerce:'For online stores',
     tag_live:'Live',
-    lbl_services:'What we do',
-    svc1_name:'Custom software',
-    svc1_desc:'Web apps and digital tools built around how your business actually works.',
-    svc2_name:'AI &amp; automation',
-    svc2_desc:'Intelligent systems that handle repetitive tasks and surface the right information, faster.',
-    svc3_name:'Data &amp; dashboards',
-    svc3_desc:'Clear, real-time views of your business performance — no spreadsheets needed.',
-    svc4_name:'Technical co-founding',
-    svc4_desc:'We partner with founders who have the vision and need someone to build it.',
-    lbl_clients:'Experience',
-    wt_fulltime:'Full-time',
-    wt_contract:'Contract',
-    zyte_desc:'Built an AI system that automated data quality checks across dozens of active pipelines, cutting manual review time by more than half.',
-    valvoline_desc:'Modernized their reporting infrastructure — moving from outdated on-premise software to live dashboards accessible from anywhere.',
-    kroger_desc:'Automated weekly brand performance reports using AI, replacing a manual process that previously took days.',
-    globant_desc:'Delivered core platform features shipped to enterprise development teams in over 40 countries.',
-    cta_heading:'Have a project in mind?',
-    cta_sub:'We’re open to new engagements. Tell us what you’re building.',
-    cta_main_btn:'Get in touch →',
     footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
     footer_sub:'Led by Tomas Sexenian',
     footer_terms:'Terms',
     footer_privacy:'Privacy'
   },
   es:{
-    studio_tagline:'Diseñamos y construimos productos digitales y herramientas con IA para empresas que quieren moverse más rápido.',
-    studio_about:'Un estudio pequeño y experimentado basado en Uruguay. Trabajamos con startups y empresas de todo el mundo — convirtiendo problemas complejos en software que la gente realmente usa.',
-    cta_hero:'Escribinos →',
+    studio_tagline:'La empresa detrás de Remy, Mercado Intel y Sibyl.',
+    studio_about:'Sexenian Studio es una empresa uruguaya operada por Tomás Sexenian. Desarrolla y opera los tres productos a continuación.',
+    contact:'Contacto',
     lbl_products:'Nuestros productos',
     remy_desc:'Un sistema operativo completo para restaurantes. Carta digital, pedidos automáticos a proveedores, inventario en tiempo real y gestión de costos inteligente — todo en un solo lugar.',
     sibyl_desc:'Probá tus ideas antes de gastar. Sibyl simula cientos de perfiles de clientes reales y te da feedback honesto sobre tu producto, mensaje o campaña — en menos de un minuto.',
@@ -599,25 +390,6 @@ var T={
     tag_founders:'Para fundadores &amp; marketers',
     tag_ecommerce:'Para tiendas online',
     tag_live:'En vivo',
-    lbl_services:'Qué hacemos',
-    svc1_name:'Software a medida',
-    svc1_desc:'Aplicaciones web y herramientas digitales construidas para cómo funciona tu negocio.',
-    svc2_name:'IA &amp; automatización',
-    svc2_desc:'Sistemas inteligentes que manejan tareas repetitivas y muestran la información correcta, más rápido.',
-    svc3_name:'Datos &amp; dashboards',
-    svc3_desc:'Vistas claras y en tiempo real del rendimiento de tu negocio — sin planillas.',
-    svc4_name:'Co-fundación técnica',
-    svc4_desc:'Nos asociamos con fundadores que tienen la visión y necesitan a alguien que la construya.',
-    lbl_clients:'Experiencia',
-    wt_fulltime:'Tiempo completo',
-    wt_contract:'Contrato',
-    zyte_desc:'Construímos un sistema de IA que automatizó controles de calidad en decenas de pipelines activos, reduciendo el tiempo de revisión manual a la mitad.',
-    valvoline_desc:'Modernizamos su infraestructura de reportes — migrando de software heredado a dashboards en la nube accesibles desde cualquier lugar.',
-    kroger_desc:'Automatizamos los reportes semanales de rendimiento de marca con IA, reemplazando un proceso manual que antes tomaba días.',
-    globant_desc:'Entregamos funcionalidades core de plataforma distribuidas a equipos enterprise en más de 40 países.',
-    cta_heading:'¿Tenés un proyecto en mente?',
-    cta_sub:'Estamos abiertos a nuevos proyectos. Contános qué estás construyendo.',
-    cta_main_btn:'Escribinos →',
     footer_main:'Sexenian Studio · Solymar, Canelones, Uruguay',
     footer_sub:'Liderado por Tomas Sexenian',
     footer_terms:'Términos',
